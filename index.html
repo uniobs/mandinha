@@ -2,28 +2,87 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagem</title>
     <style>
-        button {
-            padding: 5px 10px;
-            margin-top: 5px;
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            max-width: 400px;
+            width: 90%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            font-weight: bold;
+        }
+
+        .pix-button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            width: 100%;
+        }
+
+        .pix-button:active {
+            background-color: #0056b3;
+        }
+
+        .pix-button:focus {
+            outline: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            font-size: 1em;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <p>Olá olá, Amanda aqui! Eu geralmente vendo com desconto por fora da plataforma. Vou te passar meu Telegram e meu Pix para você poder entrar em contato comigo, tá bom?</p>
-    
-    <p>
-        <strong>Pix:</strong> 
-        <span id="pix">5679bd58-e1f7-4e53-9f9a-f5c8aa08da6a</span>
-        <button onclick="copiarPix()">Copiar Pix</button>
-    </p>
-    
-    <p>
-        <strong>Telegram:</strong> 
-        <a href="http://t.me/mandinha0x" target="_blank">http://t.me/mandinha0x</a>
-    </p>
+    <div class="container">
+        <p>Olá olá, Amanda aqui! Eu geralmente vendo com desconto por fora da plataforma. Vou te passar meu Telegram e meu Pix para você poder entrar em contato comigo, tá bom?</p>
+        
+        <p>
+            <span class="highlight">Pix:</span> 
+            <span id="pix">5679bd58-e1f7-4e53-9f9a-f5c8aa08da6a</span>
+        </p>
+        <button class="pix-button" onclick="copiarPix()">Copiar Pix</button>
+        
+        <p>
+            <span class="highlight">Telegram:</span> 
+            <a href="http://t.me/mandinha0x" target="_blank">http://t.me/mandinha0x</a>
+        </p>
+    </div>
 
     <script>
         function copiarPix() {
