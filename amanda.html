@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensagem</title>
+    <style>
+        button {
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Olá olá, Amanda aqui! Eu geralmente vendo com desconto por fora da plataforma. Vou te passar meu Telegram e meu Pix para você poder entrar em contato comigo, tá bom?</p>
+    
+    <p>
+        <strong>Pix:</strong> 
+        <span id="pix">5679bd58-e1f7-4e53-9f9a-f5c8aa08da6a</span>
+        <button onclick="copiarPix()">Copiar Pix</button>
+    </p>
+    
+    <p>
+        <strong>Telegram:</strong> 
+        <a href="http://t.me/mandinha0x" target="_blank">http://t.me/mandinha0x</a>
+    </p>
+
+    <script>
+        function copiarPix() {
+            const pixText = document.getElementById("pix").textContent;
+            navigator.clipboard.writeText(pixText)
+                .then(() => alert("Pix copiado!"))
+                .catch(err => alert("Erro ao copiar o Pix: " + err));
+        }
+    </script>
+</body>
+</html>
